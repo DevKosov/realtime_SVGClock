@@ -44,6 +44,66 @@ html, body {
   transform: scale(0.9);
 }
 
+form{
+  display: flex;
+  flex-flow: row wrap;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#imageURL, #musicURL{
+  display: inline;
+  font-family: 'Poiret One', cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  height: fit-content;
+  width: 35%;
+  padding: .4rem;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: lightpink 3px 3px 5px;
+  transition: all .2s ease;
+}
+
+form > button{
+  display: inline;
+  font-family: 'Poiret One', cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  height: fit-content;
+  width: 10%;
+  padding: .4rem;
+  margin-left: 1%;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: lightpink 3px 3px 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+form > button:hover{
+  outline: none;
+  box-shadow: pink 6px 6px 7px;
+  transform: scale(1.1);
+}
+
+form > button:focus{
+  outline: none;
+  border: none;
+}
+
+form > button:active{
+  outline: none;
+  border: none;
+  transform: scale(0.9);
+}
+
 .st3 {
   fill: #333; }
 
