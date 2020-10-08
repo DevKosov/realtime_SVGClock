@@ -6,6 +6,21 @@ function time(){
 
     //audio
     const audio = document.querySelector(".audio");
+	
+	let currSrc = audio.getAttribute('src');
+	
+	const toggle = document.querySelector(".toggle");
+	
+	toggle.onclick = function(){
+		if(currSrc==="sounds/clockTicking.mp3"){
+            audio.setAttribute('src',"sounds/clockTicking2.mp3");
+            currSrc = audio.getAttribute('src');
+		}
+		else{
+            audio.setAttribute('src',"sounds/clockTicking.mp3");
+            currSrc = audio.getAttribute('src');
+		}
+	}
 
     //get the actual second on the hour
     const now = new Date();
