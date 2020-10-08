@@ -6,8 +6,44 @@ html, body {
   margin: 0;
   background-color: #e8e1e8;
   display: flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
+  min-height: 95vh;
   width: 100%; }
+
+.toggle{
+  font-family: 'Poiret One', cursive;
+  font-size: 52px;
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem;
+  margin: 3%;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: lightpink 3px 3px 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.toggle:hover{
+  outline: none;
+  box-shadow: pink 6px 6px 7px;
+  transform: scale(1.1);
+}
+
+.toggle:focus{
+  outline: none;
+  border: none;
+}
+
+.toggle:active{
+  outline: none;
+  border: none;
+  transform: scale(0.9);
+}
 
 .st3 {
   fill: #333; }
