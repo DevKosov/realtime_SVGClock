@@ -52,3 +52,18 @@ function time(){
     setInterval(setTime, 1000);
 }
 window.onload = time;
+
+// Function to change background music and pause clock ticking sound
+const audio = document.querySelector(".audio");
+let currSrc = audio.getAttribute('src');
+
+const bgMusicForm = document.querySelector("#bgmusic");
+bgMusicForm.onsubmit = function(event){
+    event.preventDefault();
+    const inputURL = document.querySelector("#musicURL").value;
+    audio.setAttribute('src', inputURL);
+    audio.play()
+    currSrc = audio.getAttribute('src');
+    inputURL.value = "";
+    bgMusicForm.reset();
+}
