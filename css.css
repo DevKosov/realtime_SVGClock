@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Poiret One";
   src: url("font/PoiretOne-Regular.ttf"); }
+  
 html, body {
   padding: 0;
   margin: 0;
@@ -56,7 +57,7 @@ form{
 }
 
 #imageURL, #musicURL{
-  display: inline;
+  display: inline-block;
   font-family: 'Poiret One', cursive;
   font-size: 1rem;
   font-weight: 600;
@@ -72,7 +73,7 @@ form{
 }
 
 form > button{
-  display: inline;
+  display: inline-block;
   font-family: 'Poiret One', cursive;
   font-size: 1rem;
   font-weight: 600;
@@ -92,7 +93,7 @@ form > button{
 form > button:hover{
   outline: none;
   box-shadow: pink 6px 6px 7px;
-  transform: scale(1.1);
+  transform: scale(1.025);
 }
 
 form > button:focus{
@@ -103,7 +104,7 @@ form > button:focus{
 form > button:active{
   outline: none;
   border: none;
-  transform: scale(0.9);
+  transform: scale(0.975);
 }
 
 .st3 {
