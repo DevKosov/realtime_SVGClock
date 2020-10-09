@@ -1,12 +1,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>JS and CSS CLOCK</title>
+        <title>JS, SVG and CSS CLOCK</title>
         <link rel="stylesheet" type="text/css" href="css.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <button class="toggle">Toggle Clock Sound</button>
+        <form id="bgmusic">
+            <input type="text" id="musicURL" placeholder="Enter MP3 File URL to Play">
+            <button type="submit">Load and Play</button>
+        </form>
+        <form id="bgimage">
+            <input type="text" id="imageURL" placeholder="Enter Url of background image">
+            <button type="submit">Change Background</button>
+        </form>
         <audio class="audio" src="sounds/clockTicking.mp3"></audio>
         <svg viewbox="0 0 1000 1000" id="clock">
             <g id="Layer_2">
