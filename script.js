@@ -6,21 +6,13 @@ function time(){
 
     //audio
     const audio = document.querySelector(".audio");
-	
-	let currSrc = audio.getAttribute('src');
-    
+
     // toggle audio source for clock ticking
-	const toggle = document.querySelector(".toggle");
+    const toggle = document.querySelector(".toggle");
+    let tog = false;
 	toggle.onclick = function(){
-		if(currSrc==="sounds/clockTicking.mp3"){
-            audio.setAttribute('src',"sounds/clockTicking2.mp3");
-            currSrc = audio.getAttribute('src');
-		}
-		else{
-            audio.setAttribute('src',"sounds/clockTicking.mp3");
-            currSrc = audio.getAttribute('src');
-		}
-	}
+        tog = !tog;
+    }
 
     //get the actual second on the hour
     const now = new Date();
@@ -42,7 +34,13 @@ function time(){
         //add 6deg(1s) to hand each second (did this so i could prevent it to reset to 0 this way it goes up to infinite degrees)
         secondDegree = secondDegree + 6;
         //play audio pretty obvious
-        audio.play();
+        if(tog == true){
+            audio.play();
+        }
+        else{
+            audio.pause();
+            audio.currentTime = 0;
+        }
         //add the transform rotate style
         secondHand.style.transform = 'rotate(' + secondDegree + 'deg)';
         minuteHand.style.transform = 'rotate(' + minuteDegree + 'deg)';
